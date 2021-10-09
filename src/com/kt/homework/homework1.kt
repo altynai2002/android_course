@@ -1,5 +1,7 @@
 package com.kt.homework
 
+// Бакытбекова Алтынай
+
 fun main() {
     // readLine() - ввод с консоли но возвр-ет string
 //    val x = readLine()
