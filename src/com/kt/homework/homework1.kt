@@ -4,8 +4,7 @@ package com.kt.homework
 
 fun main() {
     // readLine() - ввод с консоли но возвр-ет string
-//    val x = readLine()
-//    println(readLine())
+
 
     println("Enter first number: ")
     val a = readLine().parseToInt()
@@ -18,7 +17,6 @@ fun main() {
     val subtract = a - b
     val multiply = a * b
     val division = a / b
-
 
     when(sym) {
         "+" -> println("Sum: $sum")
