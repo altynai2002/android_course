@@ -1,5 +1,7 @@
 package com.kt.homework
 
+// Бакытбекова Алтынай
+
 fun main() {
     println("Enter string: ")
     val string1 = readLine()
