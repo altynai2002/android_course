@@ -8,19 +8,17 @@ fun main() {
     val map = hashMapOf(
         "Anna" to 774332211, "Marina" to 500445566, "Alina" to 990213456, "Sasha" to 70998877
     )
-//    println(map)
     println("Введите кол-во записей: ")
     val kolZapisi = readLine().parseToInt()
     val iterator = (1..kolZapisi).iterator()
+    val read = Scanner(System.`in`)
     iterator.forEach {
-        val read = Scanner(System.`in`)
         println("Введите имя и номер: ")
         val name = read.next()
         val phone = read.nextInt()
         map[name] = phone
-//        println("First Input Number: $name, $phone")
-        println(map)
     }
+
 
      do {
          println("Введите имя: ")
@@ -31,6 +29,7 @@ fun main() {
             println("Не найдено")
         }
     } while (key != "exit")
+    read.close()
 }
 
 private fun String?.parseToInt(): Int {
