@@ -4,17 +4,12 @@ package com.kt.homework
 // Бакытбекова Алтынай
 
 fun main() {
-    var i = 0
-    val array1 = IntArray(4)
     println("Введите числа: ")
 //    insert elements
-    while(i < array1.size)
-    {
-        array1[i] = readLine().parseToInt()
-        i++
-    }
+    val num = readLine().parseToInt()
+
 //    compare elements
-    if (array1[0] + array1[1] == array1[2] + array1[3]) {
+    if (num / 10 == (num % 10) * 100 + num / 100) {
         println("Счастливое число")
     } else {
         println("Hecчастливое число")
