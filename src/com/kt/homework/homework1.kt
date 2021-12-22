@@ -1,9 +1,10 @@
 package com.kt.homework
 
+// Бакытбекова Алтынай
+
 fun main() {
     // readLine() - ввод с консоли но возвр-ет string
-//    val x = readLine()
-//    println(readLine())
+
 
     println("Enter first number: ")
     val a = readLine().parseToInt()
@@ -12,17 +13,11 @@ fun main() {
     println("Enter symbol: ")
     val sym = readLine()
 
-    val sum = a + b
-    val subtract = a - b
-    val multiply = a * b
-    val division = a / b
-
-
     when(sym) {
-        "+" -> println("Sum: $sum")
-        "-" -> println("Subtract: $subtract")
-        "*" -> println("Multiplication: $multiply")
-        "/" -> println("Division: $division")
+        "+" -> println("result: ${a + b}")
+        "-" -> println("result: ${a - b}")
+        "*" -> println("result: ${a * b}")
+        "/" -> println("result: ${divisionByZero(a, b)}")
         else -> {
             println("Enter +,-,*,/ symbols!")
         }
@@ -38,5 +33,13 @@ private fun String?.parseToInt(): Int {
     } catch (e: NumberFormatException) {
         println("exception= $e")
         return 0
+    }
+}
+
+private fun divisionByZero(a: Int, b: Int): String {
+    return try {
+        (a / b).toString()
+    } catch (e: ArithmeticException) {
+        return "exception= $e"
     }
 }
