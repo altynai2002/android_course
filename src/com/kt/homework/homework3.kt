@@ -10,13 +10,13 @@ fun main() {
 
 fun IntArray.bubbleSort(): IntArray {
     var size = this.size
-        for(i in 0 until size){
-            for (j in 1 until size - i) {
-                if (this[j - 1] > this[j]) {
-                    this.swap(j, j - 1)
-                }
+    for(i in 0 until size){
+        for (j in 1 until size - i) {
+            if (this[j - 1] > this[j]) {
+                this.swap(j, j - 1)
             }
         }
+    }
     return this
 }
 
