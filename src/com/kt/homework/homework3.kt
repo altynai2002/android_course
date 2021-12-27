@@ -9,20 +9,19 @@ fun main() {
 }
 
 fun IntArray.bubbleSort(): IntArray {
-    var swap = true
-    var array = this.size-1
-    while(swap){
-        swap = false
-        for(i in 0 until array){
-            if(this[i] > this[i+1]){
-                val t = this[i]
-                this[i] = this[i+1]
-                this[i + 1] = t
-                swap = true
+    var size = this.size
+        for(i in 0 until size){
+            for (j in 1 until size - i) {
+                if (this[j - 1] > this[j]) {
+                    this.swap(j, j - 1)
+                }
             }
         }
-        array--
-    }
     return this
 }
 
+fun IntArray.swap(idx: Int, idy: Int) {
+    val temp = this[idx]
+    this[idx] = this[idy]
+    this[idy] = temp
+}
